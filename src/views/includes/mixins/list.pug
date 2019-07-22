@@ -1,0 +1,10 @@
+
+//- list item
+mixin list(nameList,...items)
+   if !nameList
+      p #[strong list no name!]
+   else 
+     ul(class=nameList)
+      each item in items
+        li(class=`${nameList}__item`)
+           a(class=`${nameList}__link`)= item

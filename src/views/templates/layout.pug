@@ -1,0 +1,33 @@
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='')
+    block link-head
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/fonts/font-awesome.min.css', rel='stylesheet')   
+    link(href='/css/style.min.css', rel='stylesheet')
+  body
+    include ../includes/mixins/list
+    block header
+
+         header.header 
+               h2.heading Header
+               nav
+                 +list('list-menu','Home','About','Product','Contact')
+               
+    block content
+    block footer 
+         footer.footer
+               h2.heading Footer 
+    
+    block scripts
+        script(src="js/lib/jquery.min.js")
+        script(src="js/lib/bootstrap.min.js")
+        script(src="js/lib/popper.min.js")
+        script(src="js/main.min.js")
+
